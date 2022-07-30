@@ -1,7 +1,28 @@
 {
   "name": "@elonehoo/vite-plugin-dist-css",
   "version": "0.0.0",
+  "type": "module",
   "description": "This plugin will inject css into bundled js file using `import` statement.",
+  "author": "Elone Hoo <huchengyea@163.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elonehoo/vite-plugin-dist-css"
+  },
+  "homepage": "https://github.com/elonehoo/vite-plugin-dist-css#readme",
+  "bugs": "https://github.com/elonehoo/vite-plugin-dist-css/issues",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rimraf dist && tsup",
     "release": "bumpp package.json --commit --push --tag && pnpm -r publish --access public",
