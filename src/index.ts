@@ -1,47 +1,47 @@
 import fs from 'fs'
-import {resolve} from 'path'
-import type { ResolvedConfig, PluginOption } from 'vite';
+import { resolve } from 'path'
+import type { PluginOption, ResolvedConfig } from 'vite'
 
-let viteConfig:ResolvedConfig
+let viteConfig: ResolvedConfig
 
-export default function (): PluginOption{
+export default function (): PluginOption {
   return {
     name: 'dist-css',
     apply: 'build',
     enforce: 'post',
 
-    configResolved (resolvedConfig) {
-      viteConfig = resolvedConfig;
+    configResolved(resolvedConfig) {
+      viteConfig = resolvedConfig
     },
 
-    writeBundle (option:any, bundle:any) {
+    writeBundle(option: any, bundle: any) {
       if (!viteConfig.build || !viteConfig.build.lib) {
         // only for lib build
         console.warn('vite-plugin-dist-css only works in lib mode.')
-        return;
+        return
       }
       if (option.format !== 'es') {
         // only for es built
-        return;
+        return
       }
-      const files = Object.keys(bundle);
-      const cssFile = files.find((v) => v.endsWith('.css'));
-      if (!cssFile) {
-        return;
-      }
+      const files = Object.keys(bundle)
+      const cssFile = files.find(v => v.endsWith('.css'))
+      if (!cssFile)
+        return
+
       for (const file of files) {
         if (!bundle[file].isEntry) {
           // only for entry
-          continue;
+          continue
         }
-        const outDir = viteConfig.build.outDir || 'dist';
-        const filePath = resolve(viteConfig.root, outDir, file);
+        const outDir = viteConfig.build.outDir || 'dist'
+        const filePath = resolve(viteConfig.root, outDir, file)
         const data = fs.readFileSync(filePath, {
           encoding: 'utf8',
-        });
-        fs.writeFileSync(filePath, `import './${cssFile}';\n${data}`);
+        })
+        fs.writeFileSync(filePath, `import './${cssFile}';\n${data}`)
       }
     },
-  };
+  }
 }
 
