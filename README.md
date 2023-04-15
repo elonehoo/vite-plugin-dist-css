@@ -3,7 +3,7 @@
 This plugin will inject css into bundled js file using `import` statement.
 
 ```js
-bundled js file, with import css at top (if any)
+// bundled js file, with import css at top (if any)
 import './style.css';
 // rest of the file
 // ...
@@ -23,7 +23,7 @@ pnpm install @elonehoo/vite-plugin-dist-css
 ## usage
 
 ```ts
-//vite.config.ts
+// vite.config.ts
 import distCss from '@elonehoo/vite-plugin-dist-css'
 
 // https://vitejs.dev/config/
@@ -32,5 +32,5 @@ export default defineConfig({
     // any other plugins
     distCss()
   ],
-});
+})
 ```
