@@ -1,12 +1,12 @@
-import fs from 'fs'
-import { resolve } from 'path'
+import fs from 'node:fs'
+import { resolve } from 'node:path'
 import type { PluginOption, ResolvedConfig } from 'vite'
 
 let viteConfig: ResolvedConfig
 
 export default function (): PluginOption {
   return {
-    name: 'dist-css',
+    name: 'vite-plugin-dist-css',
     apply: 'build',
     enforce: 'post',
 
