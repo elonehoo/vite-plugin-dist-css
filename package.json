@@ -1,6 +1,6 @@
 {
   "name": "@elonehoo/vite-plugin-dist-css",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "This plugin will inject css into bundled js file using `import` statement.",
   "license": "MIT",
   "author": "Elone Hoo <huchengyea@163.com>",
