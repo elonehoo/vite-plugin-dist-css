@@ -4,7 +4,8 @@ This plugin will inject css into bundled js file using `import` statement.
 
 ```js
 // bundled js file, with import css at top (if any)
-import './style.css';
+import './style.css'
+
 // rest of the file
 // ...
 ```

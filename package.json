@@ -2,25 +2,25 @@
   "name": "@elonehoo/vite-plugin-dist-css",
   "version": "0.1.0",
   "description": "This plugin will inject css into bundled js file using `import` statement.",
-  "license": "MIT",
   "author": "Elone Hoo <huchengyea@163.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/elonehoo/vite-plugin-dist-css#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/elonehoo/vite-plugin-dist-css"
   },
-  "homepage": "https://github.com/elonehoo/vite-plugin-dist-css#readme",
   "bugs": "https://github.com/elonehoo/vite-plugin-dist-css/issues",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
     "./*": "./*"
   },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "*.d.ts"
@@ -35,15 +35,15 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@elonehoo/eslint-config": "2.0.0",
-    "@types/node": "20.6.3",
+    "@antfu/eslint-config": "0.43.1",
+    "@types/node": "20.8.0",
     "bumpp": "9.2.0",
-    "eslint": "8.49.0",
-    "pnpm": "8.7.6",
-    "rimraf": "5.0.1",
+    "eslint": "8.50.0",
+    "pnpm": "8.8.0",
+    "rimraf": "5.0.5",
     "tsup": "^7.2.0",
     "typescript": "5.2.2",
     "vite": "4.4.9",
-    "vitest": "0.34.4"
+    "vitest": "0.34.6"
   }
 }
