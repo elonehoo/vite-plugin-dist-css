@@ -35,7 +35,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "2.13.3",
+    "@antfu/eslint-config": "2.15.0",
     "@types/node": "20.12.7",
     "bumpp": "9.4.0",
     "eslint": "8.57.0",
@@ -43,7 +43,7 @@
     "rimraf": "5.0.5",
     "tsup": "^8.0.2",
     "typescript": "5.4.5",
-    "vite": "5.2.8",
+    "vite": "5.2.10",
     "vitest": "1.5.0"
   }
 }
