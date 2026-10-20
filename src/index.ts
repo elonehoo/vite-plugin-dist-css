@@ -1,6 +1,6 @@
+import type { PluginOption, ResolvedConfig } from 'vite'
 import fs from 'node:fs'
 import { resolve } from 'node:path'
-import type { PluginOption, ResolvedConfig } from 'vite'
 
 let viteConfig: ResolvedConfig
 
