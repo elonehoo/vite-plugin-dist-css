@@ -37,7 +37,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "3.16.0",
     "@types/node": "24.19.2",
-    "bumpp": "9.11.1",
+    "bumpp": "12.3.0",
     "eslint": "9.39.5",
     "pnpm": "9.15.9",
     "rimraf": "6.1.3",
